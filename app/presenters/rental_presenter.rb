@@ -19,7 +19,6 @@ class RentalPresenter < SimpleDelegator
     elsif active?
       ""
     end
-
   end
 
   private
