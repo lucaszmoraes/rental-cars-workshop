@@ -3,8 +3,15 @@ class NilUser
     false
   end
 
-  def employee?
+  def manager?
     false
   end
 
+  def rentals
+    []
+  end
+
+  def guest?
+    true
+  end
 end
