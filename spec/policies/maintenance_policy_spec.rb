@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 describe MaintenancePolicy do
+
   describe 'authorized?' do
     it 'should be true if admin' do
       user = build(:user, :admin)

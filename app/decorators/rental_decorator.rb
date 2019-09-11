@@ -1,6 +1,5 @@
 class RentalDecorator < ApplicationDecorator
   delegate_all
-
   def started_at
     if scheduled?
       return '---'

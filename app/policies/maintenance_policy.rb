@@ -1,4 +1,5 @@
 class MaintenancePolicy
+
   def initialize(car, user)
     @car = car
     @user = user

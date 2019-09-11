@@ -1,4 +1,4 @@
-	require 'rails_helper'
+require 'rails_helper'
 
 describe CarPresenter do
   include Rails.application.routes.url_helpers
@@ -14,7 +14,6 @@ describe CarPresenter do
         result = CarPresenter.new(car, user).maintenance_link
 
         expect(result).to include(new_car_maintenance_path(car.id))
-
       end
 
       it 'should render end maintenance if car on maintenance' do
