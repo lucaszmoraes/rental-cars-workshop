@@ -10,7 +10,6 @@ describe RentalPresenter do
       rental = create(:scheduled_rental, car: car, customer: customer)
 
       result = RentalPresenter.new(rental).status
-
       expect(result).to match /span/
       expect(result).to match /badge-success/
       expect(result).to match /Agendada/
