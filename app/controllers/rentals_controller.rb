@@ -37,9 +37,13 @@ class RentalsController < ApplicationController
 
   def return_car
     @rental = Rental.find(params[:id])
+    if 
+
+    @rental = Rental.find(params[:id])
     @car = @rental.car
     if @car.update(car_km: params[:car][:car_km], status: :available)
       @rental.update(finished_at: Time.zone.now)
+      @rental.finished!
       RentalMailer.send_return_receipt(@rental.id).deliver_now
       redirect_to @rental.car, notice: 'Carro devolvido com sucesso'
     else
